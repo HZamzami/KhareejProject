@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+
+body {
+	/* background: #1e1e1e; */
+	font-family: "roboto", sans-serif;
+}
+
+h4 {
+	word-wrap: break-word;
+
+}
+
+.cards-header {
+	padding-top: 2rem;
+}
+
+.main-content {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.shadow {
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06) !important;
+}
+
+.payment-card__type {
+	background: linear-gradient(#00C3EE, #13CFD1);
+}
+
+.payment-card__type img {
+	height: 85px;
+}
+
+.add-payment {
+	min-height: 290px;
+	background: #fff;
+	cursor: pointer;
+}
+
+.is-primary-cv,
+.is-primary-card {
+	display: none;
+}
+
+.is-primary-cv.active,
+.is-primary-card.active {
+	display: inline;
+}
+
+.set-primary-cv.active,
+.set-primary-card.active {
+	display: none;
+}
+
+.del-modal {
+	/* padding-top: 100px;
+	padding-bottom: 100px; */
+	/* height: 100%; */
+	width: 100%;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 200ms ease-in-out;
+	z-index: 10;
+
+	/* background-color: white; */
+
+}
+
+.del-modal.active {
+	transform: translate(-50%, -50%) scale(1);
+
+}
+
+.info-card {
+	padding: 50px 30px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.info-card .info-card_icon {
+	height: 125px;
+	width: 125px;
+	border: 5px solid #03a9f4;
+	border-radius: 125px;
+}
+
+.info-card .info-card_icon i {
+	font-size: 50px;
+	color: #03a9f4;
+}
+
+.info-card .info-card_icon .info-card_img-icon {
+	height: 60px;
+	width: 60px;
+	object-fit: contain;
+}
+
+.info-card .btn {
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-card--danger .info-card_icon {
+	border-color: #f44336;
+}
+
+.info-card--danger .info-card_icon i {
+	color: #f44336;
+}
+
+#overlay {
+	position: fixed;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .5);
+	transition: 200ms ease-in-out;
+	pointer-events: none;
+}
+
+#overlay.active {
+	opacity: 1;
+	pointer-events: all;
+}
+
+h1 {
+	color: #ffffff;
+}
+
+h1>a {
+	border-bottom: 2px solid #ffffff;
+	padding-bottom: 5px;
+	display: inline-block;
+	width: 50%;
+}

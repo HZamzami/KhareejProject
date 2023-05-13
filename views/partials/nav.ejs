@@ -1,0 +1,47 @@
+<nav>
+    <div class="max-bar">
+        <div class="nav-bar">
+
+            <i class="bx bx-menu sidebarOpen"></i>
+            <span class="logo navLogo">
+                <img src="../images/profile.png" alt="">
+            </span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a src="#">Khareej</a></span>
+                    <i class="bx bx-x siderbarClose"></i>
+                </div>
+                <ul class="nav-links">
+                    <li id="home-link"><a href="/">Home</a></li>
+                    <li id="about-us-link"><a href="/about-us">About Us</a></li>
+                    <% if (userType == "A") { %>
+                    <li id="talents-link"><a href="/tas">Talents</a></li>
+                    <% } else if (userType == "B") { %>
+                    <li id="portfolio-link"><a href="/portfolio">Portfolio</a></li>
+                    <% } %>
+                    <li id="contact-link"><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="buttons">
+                <ul>
+                    <% if (signed) {%>
+                    <li><button class="account-bttn bttn" onclick="location.href = '/account'">Account</button></li>
+                    <% } else { %>
+                    <li><button class="log-in-bttn bttn" onclick="location.href = '/sign-in'">Sign In</button></li>
+                    <li><button class="sign-up-bttn bttn" onclick="location.href = '/sign-up'">Sign Up</button></li>
+                    <% } %>
+
+                </ul>
+                <div class="darkLightContainer">
+                    <div class="dark-light">
+                        <i class="bx bx-moon moon"></i>
+                        <i class="bx bx-sun sun"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</nav>

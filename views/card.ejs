@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+  <link rel="stylesheet" href="cv-card.css">
+
+
+  <script defer src="card.js"></script>
+
+  <body>
+
+    <%- include("./partials/nav.ejs") %>
+
+
+
+
+      <form id="regForm" action="" method="post">
+
+        <!-- <h1>Personal Info</h1> -->
+
+        <!-- One "tab" for each step in the form: -->
+        <div class="tab">
+          <p><b id="big">Card Information</b></p>
+          <p>
+            <label for="fanme">First Name</label>
+            <input id="fanme" placeholder=" " oninput="this.className = 'fanme'" name="fanme">
+          </p>
+          <p>
+            <label for="mname">Middle Name</label>
+            <input id="mname" placeholder=" " oninput="this.className = 'mname'" name="mname">
+          </p>
+          <p>
+            <label for="lname">Last Name</label>
+            <input id="lname" placeholder=" " oninput="this.className = 'lname'" name="lname">
+          </p>
+
+        </div>
+
+        <div class="tab">
+          <p><b id="big">Card Information</b></p>
+          <p>
+            <label for="phone-number">Phone Number</label>
+            <input id="phone-number" placeholder=" " oninput="this.className = 'phone-number'" name="phone-number">
+          </p>
+          <p>
+            <label for="mail">E-mail</label>
+            <input id="mail" placeholder=" " oninput="this.className = 'mail'" name="mail">
+          </p>
+          <p>
+            <label for="address">Address</label>
+            <input id="address" placeholder=" " oninput="this.className = 'address'" name="address">
+          </p>
+
+        </div>
+
+        <div class="tab">
+          <p><b id="big">Card Information</b></p>
+          <p>
+            <label for="link">Link</label>
+            <input id="link" placeholder=" " oninput="this.className = 'link'" name="link">
+          </p>
+
+        </div>
+
+
+        <div class="nextPrevBtns">
+          <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+          <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+
+        </div>
+
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+
+        </div>
+
+      </form>
+  </body>
+
+</html>

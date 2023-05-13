@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+    <script defer src="Signup.js"> </script>
+    <link rel="stylesheet" href="Signup.css" />
+
+    <body>
+            <section class="wrapper">
+                <div class="form signup">
+                    <header class="sing-up-header">Khareej</header>
+                    <form id="khareej-form">
+                        <input type="text" placeholder="Full name" required />
+                        <input type="text" placeholder="Email address" required />
+                        <input type="password" placeholder="Password" required />
+                        <input type="password" placeholder="Confirm Password" required />
+                        <div id="whiteCheck">
+                            <p>Already registered? <a href="/sign-in"> <strong>Signin </strong> </a></p>
+                        </div>
+                        <input type="submit" value="Signup" />
+                    </form>
+                </div>
+
+                <div class="form login">
+                    <header class="log-in-header">Recruiter</header>
+
+                    <form id="recruiter-form">
+                        <input type="text" placeholder="Full name" required />
+                        <input type="text" placeholder="Email address" required />
+                        <input type="password" placeholder="Password" required />
+                        <input type="password" placeholder="Confirm Password" required />
+                        <div id="blackCheck">
+                            <p>Already registered? <a href="/sign-in"> <strong>Signin </strong> </a></p>
+                        </div>
+                        <input type="submit" value="Signup" />
+                    </form>
+                </div>
+            </section>
+    </body>
+</html>

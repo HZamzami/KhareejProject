@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+    <link rel="stylesheet" href="/3d-Card.css">
+
+    <body>
+
+        <%- include("./partials/nav.ejs") %>
+
+
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-front">
+                        <div class="left">
+                            <img src="QR-code.png" alt="">
+                        </div>
+                        <div class="right">
+                            <div class="person right-content">
+                                <i class="fas fa-user-alt"></i>
+                                <div>
+                                    <h4>Abdulaziz</h4>
+                                    <p>Web Developer</p>
+                                </div>
+                            </div>
+
+                            <div class="phone right-content">
+                                <i class="fas fa-building"></i>
+                                <div>
+                                    <p>Aramco </p>
+                                </div>
+                            </div>
+
+                            <div class="email right-content">
+                                <i class="fas fa-envelope-open-text"></i>
+                                <div>
+                                    <p>Ahmed.Ag@gmail.con</p>
+                                </div>
+                            </div>
+
+                            <div class="location right-content">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <p>Dhahran, Saudi Arabia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-back">
+                        <img src="default.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    </body>
+
+</html>

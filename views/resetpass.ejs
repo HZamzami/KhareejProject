@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+    <link rel="stylesheet" href="ResetPass.css" />
+    <script defer src="ResetPass.js"></script>
+
+    <body>
+        <%- include("./partials/nav.ejs") %>
+
+            <div class="container">
+                <header>
+                    <i class="bx bxs-check-shield"></i>
+                </header>
+                <h4>Enter the Code</h4>
+                <form action="Signin.html">
+                    <div class="input-field">
+                        <input type="number" />
+                        <input type="number" disabled />
+                        <input type="number" disabled />
+                        <input type="number" disabled />
+                    </div>
+                    <button>Confirm</button>
+                </form>
+            </div>
+    </body>
+
+</html>

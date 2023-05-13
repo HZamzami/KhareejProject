@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+
+  <link rel="stylesheet" href="cv-card.css">
+  <script defer src="cv.js"></script>
+
+
+
+  <body>
+
+    <%- include("./partials/nav.ejs") %>
+    <form id="regForm" action="http://localhost:1570/portfolio" method="post">
+
+
+      <!-- One "tab" for each step in the form: -->
+      <div class="tab">
+        <p><b id="big">Personal Information</b></p>
+        <p>
+          <label for="fname">First Name</label>
+          <input id="fname" placeholder=" " oninput="this.className = 'fanme'" name="fname">
+        </p>
+        <p>
+          <label for="lname">Last Name</label>
+          <input id="lname" placeholder=" " oninput="this.className = 'lanme'" name="lname">
+        </p>
+        <p>
+          <label for="phone-number">Phone Number</label>
+          <input id="phone-number" placeholder=" " oninput="this.className = 'number'" name="phone-number">
+        </p>
+        <p>
+          <label for="profession">Profession</label>
+          <input id="profession" placeholder=" " oninput="this.className = 'Profession'" name="profession">
+        </p>
+      </div>
+
+      <!-- Education -->
+      <div class="tab">
+        <p><b id="big">Education</b></p>
+        <p>
+          <label for="major">Major</label>
+          <input id="major" placeholder=" " oninput="this.className = 'major'" name="major">
+        </p>
+        <p>
+          <label for="university">University Name</label>
+          <input id="university" placeholder=" " oninput="this.className = 'university'" name="university">
+        </p>
+        <p>
+          <label for="edu-start">Start Date</label>
+          <input type="date" id="edu-start" name="edu-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+        </p>
+        <p>
+          <label for="edu-end">End Date</label>
+          <input type="date" id="edu-end" name="edu-end" value="2018-07-22" min="1900-01-01" max="2024-12-31">
+        </p>
+      </div>
+
+
+      <div class="tab">
+        <p><b id="big">Education</b></p>
+        <p>
+          <label for="skills_edu">Skills</label>
+          <textarea name="skills_edu" id="edu-skills" rows="10" cols="100"></textarea>
+        </p>
+      </div>
+
+      <!-- Work Experience -->
+
+      <div class="tab">
+        <p><b id="big">Work Experience</b></p>
+        <p>
+          <label for="job">Job Title</label>
+          <input id="job" placeholder=" " oninput="this.className = 'job'" name="job">
+        </p>
+        <p>
+          <label for="firm">Firm Name</label>
+          <input placeholder=" " oninput="this.className = 'firm'" name="firm">
+        </p>
+        <p>
+          <label for="work-start">Start Date</label>
+          <input type="date" id="work-start" name="work-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+        </p>
+        <p>
+          <label for="work-end">End Date</label>
+          <input type="date" id="work-end" name="work-end" value="2018-07-22" min="1900-01-01" max="2024-12-31">
+        </p>
+      </div>
+
+      <div class="tab">
+        <p><b id="big">Work Experience</b></p>
+        <p>
+          <label for="work-history">Work History</label>
+          <textarea name="work-history" id="work-history" rows="10" cols="100"></textarea>
+        </p>
+
+      </div>
+
+      <div class="nextPrevBtns">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+
+      </div>
+
+
+      <!-- Circles which indicates the steps of the form: -->
+      <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
+
+    </form>
+  </body>
+
+</html>

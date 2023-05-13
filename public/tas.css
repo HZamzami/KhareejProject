@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+/*  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Roboto", sans-serif;
+
+}
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+.header-title>span {
+    color: #0076de;
+}
+
+.search-wrapper {
+    width: 60%;
+    margin: auto;
+    min-width: 300рх;
+    height: 3.5rem;
+    position: relative;
+	margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.search-box {
+    position: absolute;
+    background-color: #f6f8fa;
+    box-shadow: rgba(2, 11, 20, 0.2) 0px 5px 15px;
+    padding: bottom 5px;
+    height: 100%;
+    width: 100%;
+}
+
+.search-card {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+.search-input {
+    height: 100%;
+    width: 85%;
+    border: none;
+    padding: 0.5rem;
+}
+
+.search-button {
+    width: 15%;
+    background: #0076de;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.filter-box {
+    width: 100%;
+    height: auto;
+    font-size: 0.8rem;
+    width: 60%;
+    min-width: 300px;
+    margin: auto
+}
+
+.filter-dropdown {
+    width: 100%;
+    border-bottom: 1px solid #64b1f5;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    Gap: 0.3rem;
+}
+
+.filter-select {
+	
+    border: none;
+    padding: 0.2rem;
+	background-color: #f8f8f8;
+    width: 25%;
+}
+
+
+.filter-select:hover {
+    background: #f6f8fa;
+}
+
+
+
+
+.filter-chosen {
+    width: 100%;
+    Padding: 0.3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.chosen-card {
+    background: #0076de;
+    padding: 0.2rem 0.5rem;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+/*  */
+body {
+	background: #f9f9f9;
+	font-family: "Roboto", sans-serif;
+}
+
+/* .main-content {
+	padding-top: 100px;
+	padding-bottom: 100px;
+} */
+
+.table {
+	border-spacing: 0 15px;
+	border-collapse: separate;
+}
+.table thead tr th,
+.table thead tr td,
+.table tbody tr th,
+.table tbody tr td {
+	vertical-align: middle;
+	border: none;
+}
+.table thead tr th:nth-last-child(1),
+.table thead tr td:nth-last-child(1),
+.table tbody tr th:nth-last-child(1),
+.table tbody tr td:nth-last-child(1) {
+	text-align: center;
+}
+.table tbody tr {
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+.table tbody tr td {
+	background: #fff;
+}
+.table tbody tr td:nth-child(1) {
+	border-radius: 5px 0 0 5px;
+}
+.table tbody tr td:nth-last-child(1) {
+	border-radius: 0 5px 5px 0;
+}
+
+.user-info {
+	display: flex;
+	align-items: center;
+}
+.user-info__img img {
+	margin-right: 15px;
+	height: 55px;
+	width: 55px;
+	border-radius: 45px;
+	border: 3px solid #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+td{
+	text-align: center;
+}
+th{
+	text-align: center;
+}
+.follow-button {
+    color: #3399FF;
+    font-family: "Helvetica";
+    font-size: 10pt;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #3399FF;
+    border-radius: 3px;
+    width: 85px;
+    height: 30px;
+    /* position: absolute;	 
+    top: 50px;
+    left: 50px;	 */
+    /* cursor: hand;		     */
+  }

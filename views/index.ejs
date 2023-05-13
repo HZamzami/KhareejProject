@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+    <link rel="stylesheet" href="test.css" />
+
+    <body>
+        <%- include("./partials/nav.ejs") %>
+            <details>
+                <summary>Personal Information <i class="fa-solid fa-user"></i></summary>
+                <form action="/cv" method="POST">
+
+                    <p class="input-container">
+                        <label for="first-name">First Name: </label>
+                        <input type="text" id="first-name" name="first-name" placeholder="Omar" required>
+                    </p>
+
+                    <p class="input-container">
+                        <label for="last-name">Last Name: </label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Al-Zahrani" required>
+                    </p>
+
+                    <p class="input-container">
+                        <label for="pno">Phone Number: </label>
+                        <input type="tel" id="pno" name="pno" required placeholder="+966501234567"></input>
+                    </p>
+
+                    <p class="input-container">
+                        <label for="status">Select your current status: </label>
+
+                        <select name="status" required>
+                            <option selected="true" disabled="disabled" value="">Status</option>
+                            <option value="SWE">Fresh Graduate</option>
+                            <option value="CS">Student</option>
+                            <option value="ME">Employee</option>
+                        </select>
+                    </p>
+                    <button>Submit</button>
+                </form>
+            </details>
+            <details>
+                <summary>Education <i class="fa-solid fa-book"></i></summary>
+                <form action="/cv" method="POST">
+
+                    <p class="input-container">
+                        <label for="major">Select your major: </label>
+                        <select name="major" required>
+                            <option selected="true" disabled="disabled" value="">Major</option>
+                            <option value="Software Engineering">Software Engineering</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Mechanical Engineering">Mechanical Engineering</option>
+                        </select>
+                    </p>
+                    <p class="input-container">
+                        <label for="university">Select your university: </label>
+                        <select name="university" required>
+                            <option selected="true" disabled="disabled" value="">University</option>
+                            <option value="SWE">KFUPM</option>
+                            <option value="CS">KSU</option>
+                            <option value="ME">PMU</option>
+                        </select>
+                    </p>
+
+                    <label for="edu-start-date"></label>
+                    <input type="date" id="edu-start-date" name="edu-start-date" required>
+
+                    <label for="edu-end-date"></label>
+                    <input type="date" id="edu-end-date" name="edu-end-date" required>
+
+
+                    <button>Submit</button>
+                </form>
+            </details>
+            <details>
+                <summary>Summary</summary>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Summary</summary>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Summary</summary>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </details>
+
+
+    </body>
+
+</html>

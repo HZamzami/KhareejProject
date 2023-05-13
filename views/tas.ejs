@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+	<link rel="stylesheet" type="text/css" href="tas.css">
+	<script defer src="tas.js"></script>
+
+	<body>
+		<%- include("./partials/nav.ejs") %>
+
+
+
+			<!-- search -->
+			<div class="search-wrapper">
+				<div class="search-box">
+					<div class="search-card">
+						<input class="search-input" type="text" placeholder="Name or keywords">
+						<button class="search-button">Search</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- filter box -->
+			<div class="filter-box">
+				<div class="filter-dropdown">
+					<select onchange="filter()" class="filter-select" id="University" name="University">
+						<option>University</option>
+						<option>KFUPM</option>
+						<option>KSU</option>
+						<option>PMU</option>
+					</select>
+					<select onchange="filter()" class="filter-select" id="Major" name="Major">
+						<option>Major</option>
+						<option>Software Engineering</option>
+						<option>Computer Science</option>
+						<option>Mechanical Engineering</option>
+					</select>
+
+					<!-- <select col-index=  class="filter-select" id="location" name="location">
+				<option>Locations</option>
+				<option>Wstren region</option>
+				<option>central region</option>
+				<option>Eastren region</option>
+			</select> -->
+					<select onchange="filter()" class="filter-select" id="Status" name="Status">
+						<option>Status</option>
+						<option>Fresh Graduate</option>
+						<option>Student</option>
+						<option>Employee</option>
+					</select>
+					<input type="checkbox" onclick="filter()" id="Following" name="Following">
+					<label for="Following">Following only</label>
+
+				</div>
+				<div class="filter-chosen">
+					<div style="display: none;" onclick="cancelFilter(this)" id="1" class="chosen-card">
+						<i class="fas fa-times-circle"></i>
+					</div>
+					<div style="display: none;" onclick="cancelFilter(this)" id="2" class="chosen-card">
+						<i class="fas fa-times-circle"></i>
+					</div>
+
+					<div style="display: none;" onclick="cancelFilter(this)" id="3" class="chosen-card">
+						<i class="fas fa-times-circle"></i>
+					</div>
+				</div>
+			</div>
+			<!-- <section class="main-content"> -->
+			<div class="container">
+
+
+
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Personal Info</th>
+							<th>Status</th>
+							<th>Last modified</th>
+							<th>University</th>
+							<th>Major</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<% talents.forEach((talent)=> { %>
+							<tr>
+								<td>
+									<div onclick="location.href='#';" style="cursor: pointer" class="user-info">
+										<div class="user-info__img">
+											<img src="user-pic.png" alt="User Img">
+										</div>
+										<div class="user-info__basic">
+											<h5 class="mb-0">
+												<%= talent.name %>
+											</h5>
+											<p class="text-muted mb-0">28 yrs, Male</p>
+										</div>
+									</div>
+								</td>
+								<td>
+									<h6 class="mb-0">
+										<%= talent.status %>
+									</h6>
+								</td>
+								<td>
+									<h6 onclick="location.href='#';" class="mb-0">2 Feb 2021</h6>
+									<small>06:00 PM</small>
+								</td>
+								<td>
+									<h6 class="mb-0">
+										<%= talent.uni %>
+									</h6>
+									<!-- <a href="#!"><small>Contact</small></a> -->
+								</td>
+								<td>
+									<h6 class="mb-0">
+										<%= talent.major %>
+									</h6>
+								</td>
+								<td>
+									<!-- check if the recrutir is already following the talent or not  -->
+									<% if (talent.following.includes("1") ) { %>
+										<button class="follow-button" style="color: rgb(255, 255, 255); background-color: rgb(46, 184, 46);border-color: rgb(46, 184, 46);" onclick="follow(this)">Following</button>
+										<% } else { %>
+											<button class="follow-button" onclick="follow(this)">+ Follow</button>
+											<% } %>
+								</td>
+							</tr>
+
+
+							<% }) %>
+
+								<!-- <tr >
+					<td >
+						<div onclick="location.href='#';" style="cursor: pointer" class="user-info">
+							<div class="user-info__img">
+								<img src="Untitled.png" alt="User Img">
+							</div>
+							<div class="user-info__basic">
+								<h5 class="mb-0">Abdulaziz Albaiz</h5>
+								<p class="text-muted mb-0">28 yrs, Male</p>
+							</div>
+						</div>
+					</td>
+					<td>
+						<h6 class="mb-0">Student</h6>
+					</td>
+					<td>
+						<h6 onclick="location.href='#';" class="mb-0">2 Feb 2021</h6>
+						<small>06:00 PM</small>
+					</td>
+					<td>
+						<h6 class="mb-0">KFUPM</h6>
+						<a href="#!"><small>Contact</small></a>
+					</td>
+					<td>
+						<h6 class="mb-0">Mechanical Engineering</h6>
+					</td>
+					<td>
+						<button class="follow-button" onclick="follow(this)">+ Follow</button>	
+						
+					</td>
+				</tr> -->
+
+					</tbody>
+				</table>
+			</div>
+			<!-- </section> -->
+
+			<!-- clickble divs -->
+
+	</body>
+
+</html>

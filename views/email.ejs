@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+    <link rel="stylesheet" href="Email.css" />
+
+    <body>
+        <%- include("./partials/nav.ejs") %>
+
+            <div class="container">
+                <header>
+                    <i class="fa fa-envelope small-icon" aria-hidden="true"></i>
+                </header>
+                <h4>Enter your Email</h4>
+                <form action="ResetPass.html">
+                    <div class="input-field">
+                        <input type="text" placeholder="Email address" required />
+                    </div>
+                    <button>Confirm</button>
+                </form>
+            </div>
+    </body>
+
+</html>

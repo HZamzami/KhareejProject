@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+
+    <link rel="stylesheet" href="/Signin.css" />
+    <script defer src="/Signin.js"></script>
+
+    <body>
+        
+
+            <section class="wrapper">
+                <div class="form signup">
+                    <header>Login</header>
+                    <form action="#">
+                        <input type="text" placeholder="Email address" required />
+                        <input type="password" placeholder="Password" required />
+                        <div class="checkbox">
+                            <a href="../Reset_Password/Email.html"> Forgot Password? </a>
+
+                        </div>
+                        <input type="submit" value="Sign in" />
+
+                        <div class="not-member">
+                            Not registered yet? <a href="/sign-up"> <strong>Signup </strong> </a>
+                        </div>
+                    </form>
+                </div>
+
+
+
+            </section>
+    </body>
+
+</html>
